@@ -1,7 +1,6 @@
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
-np.set_printoptions(threshold=np.inf)
 
 def lbp(M,i_ref,j_ref):
     ref_value = M[i_ref][j_ref]
