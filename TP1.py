@@ -56,11 +56,11 @@ h,w = img.shape[:2]
 img_res = cv2.resize(img,(h+1,w+1),interpolation = cv2.INTER_AREA)
 height,width = img_res.shape[:2]
 
-img_lbp = np.zeros((img.shape[0],img.shape[1]))
+img_lbp = np.zeros((h,w))
 
 for i in range(1,h):
     for j in range(1,w):
-        img_lbp[i][j] = lbp(img_res,i,j)
+        img_lbp[i-1][j-1] = lbp(img_res,i,j)
 cv2.imwrite('img_lbp.jpg', img_lbp)
 
 # plt.imshow(img_lbp,cmap ="gray")
