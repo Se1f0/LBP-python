@@ -104,6 +104,7 @@ img = cv2.copyMakeBorder(img,1,1,1,1,cv2.BORDER_REFLECT)
 height,width = img.shape[:2]
 plt.title("L'image requete")
 plt.imshow(img,cmap='gray')
+plt.show()
 
 # On lit les images pour trouver la plus similaire a l'image requete
 # Pour chaque Image,on detect le visage et on duplique les bordures
@@ -173,6 +174,7 @@ fig.add_subplot(rows, cols, 7)
 plt.imshow(img8,cmap='gray')
 plt.axis('off')
 plt.title("img8")
+plt.show()
 
 # On applique LBP pour tous les images
 fig = plt.figure(figsize=(10, 7))
@@ -226,6 +228,7 @@ fig.add_subplot(rows, cols, 8)
 plt.imshow(img_lbp8,cmap='gray')
 plt.axis('off')
 plt.title("img8")
+plt.show()
 
 # On cree des regions pour tous les images
 bloc_size_r = 8
@@ -326,3 +329,4 @@ imgSim = cv2.imread(img_path,0)
 plt.imshow(imgSim,cmap='gray')
 plt.axis('off')
 plt.title("L'image la plus similaire")
+plt.show()
